@@ -1,0 +1,9 @@
+{
+  "best_model": "dense",
+  "selection_metric": "validation macro F1",
+  "majority_baseline": {
+    "label": "neutral",
+    "test_accuracy": 0.4833116248778899,
+    "test_macro_f1": 0.217221886833873
+  }
+}

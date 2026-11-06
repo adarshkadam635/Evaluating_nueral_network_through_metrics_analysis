@@ -7,6 +7,36 @@ All three models were trained from scratch on the public
 The repository includes the trained models, executed notebook, metrics, plots,
 and an inference command.
 
+## Interactive dashboard
+
+**Live on Vercel: [neural-metrics-lab.vercel.app](https://neural-metrics-lab.vercel.app)**
+
+The responsive dashboard in `dashboard/` includes model comparison, all evaluation
+metrics, training/validation accuracy and loss curves, normalized confusion
+matrices, per-class reports, test ROC curves, class distributions, provenance,
+CSV export, and a live sentiment playground using the trained dense model.
+
+The prediction runs entirely in the browser using the exported learned weights,
+not a simulated response or external API. JavaScript predictions are tested against
+the original TensorFlow outputs with a tolerance of `2e-6`. Blank input is rejected.
+The dashboard is static, so it runs on Vercel without a Python server.
+
+```powershell
+# Refresh the dashboard after retraining (requires the Python environment above).
+.\.venv\Scripts\python.exe scripts/build_dashboard.py
+node --test dashboard/tests/inference.test.mjs
+
+# Preview at http://localhost:8846
+python -m http.server 8846 --directory dashboard
+
+# Deploy on your connected Vercel account
+vercel deploy dashboard --project neural-metrics-lab --prod --yes
+```
+
+Dashboard data is exported from `artifacts/`; raw dataset tweets are not published.
+The dense model's exported vocabulary and weights are public as part of the demo.
+Run `scripts/build_dashboard.py` again whenever models or recorded metrics change.
+
 ## Retraining results
 
 Actual CPU run on **6 November 2026**, Python 3.12.10, TensorFlow 2.20.0, seed 42.

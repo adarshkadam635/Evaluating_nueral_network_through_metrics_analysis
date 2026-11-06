@@ -1,0 +1,64 @@
+{
+  "source": "https://raw.githubusercontent.com/cardiffnlp/tweeteval/4fbd22cd78421f05b1ecdb4fc5725bc7a7bd8f66/datasets/sentiment",
+  "revision": "4fbd22cd78421f05b1ecdb4fc5725bc7a7bd8f66",
+  "files": {
+    "train_text.txt": {
+      "sha256": "368f01052ea6fd8ffc408a2a2e6ac9669e31542581a0396ef16591ea26eb98a6",
+      "bytes": 4970029
+    },
+    "train_labels.txt": {
+      "sha256": "122bfb1732fb6995b0e5c5f726c0ba457c469c3b6e60513007ce5037f23e65d4",
+      "bytes": 91230
+    },
+    "val_text.txt": {
+      "sha256": "e5b021e6fc45064c260b09814b803d8f56cada519c4d952d72f43d48a350a964",
+      "bytes": 219137
+    },
+    "val_labels.txt": {
+      "sha256": "b4566926c72e2e4e2916c864def94e76c4cdde52446af2c7ba4fc2006e057e51",
+      "bytes": 4000
+    },
+    "test_text.txt": {
+      "sha256": "09a93a55c63fd93f97485ef7302889d7edb4091cd49733aa37da094f0bfa0675",
+      "bytes": 1156877
+    },
+    "test_labels.txt": {
+      "sha256": "6afb4afe9374d1f983bcf9a7c79b108d0f37fdf020a83f30488309bed215db9d",
+      "bytes": 24568
+    }
+  },
+  "deduplication": {
+    "val": {
+      "raw_rows": 2000,
+      "kept_rows": 2000,
+      "removed_rows": 0
+    },
+    "train": {
+      "raw_rows": 45615,
+      "kept_rows": 45582,
+      "removed_rows": 33
+    },
+    "test": {
+      "raw_rows": 12284,
+      "kept_rows": 12284,
+      "removed_rows": 0
+    }
+  },
+  "effective_class_counts": {
+    "test": {
+      "negative": 3972,
+      "neutral": 5937,
+      "positive": 2375
+    },
+    "val": {
+      "negative": 312,
+      "neutral": 869,
+      "positive": 819
+    },
+    "train": {
+      "negative": 7091,
+      "neutral": 20653,
+      "positive": 17838
+    }
+  }
+}
